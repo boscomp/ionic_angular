@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-button slot="start">
+      <ion-back-button defaultHref="/places"></ion-back-button>
+    </ion-button>
+    <ion-button slot="end" color ="danger" (click)="deletePlace()">
+      <ion-icon name ="trash-outline" ></ion-icon>
+    </ion-button>
+    <ion-title>{{miplace.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-img [src]="miplace.imageURL"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1 class="ion-text-center">{{miplace.title}}</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+
+      <ion-col>
+        <ion-list *ngIf="(miplace.comments!=undefined)&&(miplace.comments.length>0);else nocomments">
+          <ion-item *ngFor="let comment of miplace.comments">
+            {{comment}}
+          </ion-item>
+        </ion-list>
+        <ng-template #nocomments>
+          <p class="ion-text-center"> No hay comentario todavía....</p>
+        </ng-template>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>

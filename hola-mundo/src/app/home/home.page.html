@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-button slot="start">
+      <ion-back-button defaultHref="/places"></ion-back-button>
+    </ion-button>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-card *ngFor="let photo of photos">
+      <ion-img [src]="photo.thumbnailUrl"></ion-img>
+      <ion-card-content>
+        <p>{{photo.title}}</p>
+        <p>{{photo.albumId}}</p>:<a [href]="photo.url" target="_blank">{{photo.url}}</a>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>
