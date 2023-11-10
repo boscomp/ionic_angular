@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{titulo}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let contact of contacts.data">
+      <ion-avatar slot="start">
+        <ion-img [src]="contact.avatar"></ion-img>
+      </ion-avatar>>
+      <ion-label>{{contact.first_name}}</ion-label>
+      <ion-label>{{contact.last_name}}</ion-label>
+      <ion-label>{{contact.email}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
