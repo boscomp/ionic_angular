@@ -2,16 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SaludaComponent } from './saluda/saluda.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
-import { ListadoComponent } from './listado/listado.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [SaludaComponent, CabeceraComponent, ListadoComponent],
+  declarations: [SaludaComponent, CabeceraComponent],
   imports: [
-    CommonModule
+    CommonModule, FormsModule
   ],
   exports: [CommonModule,
     CabeceraComponent,
-  SaludaComponent,
-  ListadoComponent]
+  SaludaComponent
+  ]
 })
 export class ComponentesModule { }

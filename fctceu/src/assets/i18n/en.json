@@ -1,0 +1,11 @@
+{
+    "LOGIN":
+    {
+        "EMAIL_LABEL": "Email",
+        "EMAIL_HOLDER": "Enter your email",
+        "PWD_LABEL": "Password",
+        "PWD_HOLDER": "Enter your password",
+        "BOTONENTER": "Enter",
+        "FCT_LABEL":"FCT - REGISTER CONTROL"
+    }
+}

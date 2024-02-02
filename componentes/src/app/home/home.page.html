@@ -12,7 +12,8 @@
   </ion-header>
 
   <div id="container">
-    <app-saluda *ngFor="let usuario of usuarios" [nombre]="usuario.nombre"></app-saluda>
+    <app-saluda *ngFor="let usuario of usuarios" [nombre]="usuario.nombre"
+    (propagar)="procesaPropagar($event)"></app-saluda>
     <app-saluda [nombre]="nombre"></app-saluda>
     <app-listado nombreCiudad={{nombreCiudad}}></app-listado>
   </div>
