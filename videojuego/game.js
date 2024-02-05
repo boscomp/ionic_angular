@@ -99,7 +99,7 @@ ejecutar () {
 }
 
 platformImpact(ball, platform) {
-   this.scoreboard.incrementPoints(1);
+
    let relativeImpact = ball.x - platform.x;
 
    if (relativeImpact<0.1 && relativeImpact>0.1) {
