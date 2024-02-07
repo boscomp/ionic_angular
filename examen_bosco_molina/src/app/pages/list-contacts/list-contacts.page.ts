@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { contact_full } from 'src/app/modelo/modelo-support.model';
 import { ContactsService } from 'src/app/services/contacts.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-list-contacts',
   templateUrl: './list-contacts.page.html',
@@ -9,7 +10,7 @@ import { ContactsService } from 'src/app/services/contacts.service';
 export class ListContactsPage implements OnInit {
   contacts: contact_full={page:0, per_page:0, total:0, total_pages:0, data:[], support:[]}
   titulo: string="Lista de contactos"
-  constructor( private _cs: ContactsService) { }
+  constructor( private _cs: ContactsService, private router: Router) { }
 
   ngOnInit() {
     this._cs.get_contacts().subscribe(data=>
@@ -18,7 +19,7 @@ export class ListContactsPage implements OnInit {
         this.contacts=this.contacts;
       })
   }
-
+ 
 
 
 /*

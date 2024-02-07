@@ -6,7 +6,7 @@
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-item *ngFor="let contact of contacts.data">
+    <ion-item *ngFor="let contact of contacts.data" (click)="view_Contact(contact)">
       <ion-avatar slot="start">
         <ion-img [src]="contact.avatar"></ion-img>
       </ion-avatar>>

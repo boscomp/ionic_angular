@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: ListContactsPage
+  },  {
+    path: 'contacts-detail',
+    loadChildren: () => import('./contacts-detail/contacts-detail.module').then( m => m.ContactsDetailPageModule)
   }
+
 ];
 
 @NgModule({

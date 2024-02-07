@@ -11,12 +11,12 @@ export class Game extends Phaser.Scene {
         this.scoreboard = new Scoreboard(this)
     }
 
-
+// REMOVE.BG/ES
     preload() {
         this.load.image('background', 'images/backvillamarin.jpg');
-        this.load.image('platform', 'images/platform.png');
-        this.load.image('ball', 'images/juanjo.jpg');
-        this.load.image('bluebrick', 'images/palojordan.png');
+        this.load.image('platform', 'images/juanmiplatform.png');
+        this.load.image('ball', 'images/balon.png');
+        this.load.image('bluebrick', 'images/porteria.png');
         this.load.image('blackbrick', 'images/brickBlack.png');
         this.load.image('greenbrick', 'images/brickGreen.png');
         this.load.image('orangebrick', 'images/brickOrange.png');
