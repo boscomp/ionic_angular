@@ -20,12 +20,12 @@ export class Game extends Phaser.Scene {
         this.load.image('blackbrick', 'images/brickBlack.png');
         this.load.image('greenbrick', 'images/brickGreen.png');
         this.load.image('orangebrick', 'images/brickOrange.png');
-        this.load.audio('gamesample', 'audios/sevillaconfiesa.mp3');
+        this.load.audio('gamesample', 'audios/ohjuanmigue.mp3');
 
     }
 
     create() {
-
+        
         //Seteamos el sistema físico de bordes de rebote:
         this.physics.world.setBoundsCollision(true, true, true, false);
         
@@ -104,7 +104,8 @@ export class Game extends Phaser.Scene {
         this.scoreboard.incrementPoints(10);
         //Comprobamos si el número de elementos de ladrillos ha llegado a cero:
         if (this.bricks.countActive() === 0) {
-            this.showCongratulations()
+            this.showCongratulations();
+            this.gameSample.pause();
         }
 
     }
@@ -133,7 +134,7 @@ export class Game extends Phaser.Scene {
         //Control de fin de partida al escaparse la bola por la pantalla de abajo:
         //500 es la altura de nuestra pantalla configurada en el archivo index.js
         if (this.ball.y > 500) {
-            this.showGameOver()
+            this.showGameOver();
             this.gameSample.pause();
         }
 
